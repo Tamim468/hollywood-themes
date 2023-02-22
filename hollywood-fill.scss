@@ -532,7 +532,7 @@ $hw-editor-toolbar-border: $hw-base !default;
         color: $hw-editor-sidebar-entry-caption-text;
 		background-color: $hw-editor-sidebar-entry-caption-bg;
         
-        .iconify {
+        & > .iconify {
             color: $hw-editor-sidebar-entry-caption-icon;
             &.chevron {
                 color: $hw-editor-sidebar-entry-caption-chevron;
