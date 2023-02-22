@@ -1,11 +1,29 @@
+/*
+    HOLLYWOOD CODE EDITOR — Advanced open-source interface for execution platforms
+    Source code available at https://github.com/synllc/hw
+    Copyright (C) 2018-2022 Synapse Softworks LLC
+
+    This file and program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This file and program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
 
 /* -------------- Base colors --------------  */
 
-$hw-bg-deep:    #1a1818 !default;    // When you need an extra level of depth.
-$hw-bg:         #1c1917 !default;    // For vast background elements (i.e. page containers).
-$hw-base:       #292524 !default;    // For generic background elements (i.e. buttons and textboxes).
-$hw-layer1:     #44403c !default;    // For captions on dialogs and other imposed text labels.
-$hw-layer2:     #57534e !default;    // Extra shade for additional layering if needed.
+$hw-bg-deep:    black !default;    // When you need an extra level of depth.
+$hw-bg:         black !default;    // For vast background elements (i.e. page containers).
+$hw-base:       black !default;    // For generic background elements (i.e. buttons and textboxes).
+$hw-layer1:     #1c1917 !default;    // For captions on dialogs and other imposed text labels.
+$hw-layer2:     #292524 !default;    // Extra shade for additional layering if needed.
 $hw-layer3:     #78716c !default;    // Extra shade for additional layering if needed.
 $hw-layer4:     #a8a29e !default;    // Extra shade for additional layering if needed.
 
@@ -23,10 +41,12 @@ $hw-blue-dark:  #0369a1 !default;
 
 $hw-primary:    $hw-blue-dark !default;      // Primary accent color used everywhere in the UI.
 
+$hw-border: $hw-layer2 !default; // Color for the HC border.
+
 /* -------------- Main interface colors --------------  */
 
 // Title bar.
-$hw-titlebar-bg: linear-gradient(to bottom, $hw-base, $hw-bg) !default;
+$hw-titlebar-bg: $hw-bg !default;
 $hw-titlebar-text: $hw-text !default;
 $hw-titlebar-control: $hw-text !default;
 $hw-titlebar-control-bg: transparent !default;
@@ -126,17 +146,17 @@ $hw-contextmenu-icon-select: $hw-text !default;
 $hw-contextmenu-shadow: 0 0rem 0.5rem rgba(0, 0, 0, 0.3) !default;
 
 // Page list.
-$hw-multimenu: $hw-bg !default;
+$hw-multimenu: $hw-base !default;
 $hw-multimenu-pages: $hw-bg-deep !default;
-$hw-multimenu-list-shadow: 0.2rem 0 0.5rem rgba(0, 0, 0, 0.4) !default;
-$hw-multimenu-button-bg: $hw-base !default;
+$hw-multimenu-list-shadow: none !default;
+$hw-multimenu-button-bg: transparent !default;
 $hw-multimenu-button-text: $hw-text !default;
 $hw-multimenu-button-subtext: $hw-text-sub !default;
-$hw-multimenu-button-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3) !default;
+$hw-multimenu-button-shadow: none !default;
 $hw-multimenu-accent: $hw-primary !default;
 $hw-multimenu-icon: $hw-text !default;
-$hw-multimenu-button-bg-hover: $hw-layer1 !default;
-$hw-multimenu-button-bg-select: adjust-color($hw-layer1, $alpha: -0.5) !default;
+$hw-multimenu-button-bg-hover: rgba(255, 255, 255, 0.05) !default;
+$hw-multimenu-button-bg-select: adjust-color($hw-bg, $alpha: -0.3) !default;
 
 /* -------------- Editor colors --------------  */
 
@@ -194,6 +214,8 @@ $hw-editor-toolbar-border: $hw-base !default;
 .hw-titlebar {
     color: $hw-titlebar-text;
     background: $hw-titlebar-bg;
+    border-color: $hw-border;
+    border-bottom-width: 1px;
     -webkit-app-region: drag;
 
     .control {
@@ -446,7 +468,7 @@ $hw-editor-toolbar-border: $hw-base !default;
     color: $hw-editor-tab-caption;
     background: $hw-editor-tab-bg;
     box-shadow: $hw-editor-tab-shadow;
-    border: $hw-editor-tab-border;
+    border-color: $hw-border;
 
     .iconify {
         color: $hw-editor-tab-icon;
@@ -462,7 +484,6 @@ $hw-editor-toolbar-border: $hw-base !default;
         color: $hw-editor-tab-caption-select;
         background: $hw-editor-tab-bg-select;
         box-shadow: $hw-editor-tab-shadow-select;
-        border: $hw-editor-tab-border-select;
 
         .iconify {
             color: $hw-editor-tab-icon-select;
@@ -479,9 +500,18 @@ $hw-editor-toolbar-border: $hw-base !default;
 .editor-view {
 	border-color: $hw-editor-border-color;
 
+    .action-bar {
+        border-color: $hw-border;
+    }
+
     .tabs-container {
         box-shadow: 0 0.25rem 1rem $hw-editor-shadow-color;
+        border-color: $hw-border;
         z-index: 1;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
 	.main-container {
@@ -524,6 +554,7 @@ $hw-editor-toolbar-border: $hw-base !default;
 
 .sidebar {
     box-shadow: 0 0 1rem $hw-editor-shadow-color;
+    border-color: $hw-border;
     z-index: 1;
 }
 
@@ -531,6 +562,7 @@ $hw-editor-toolbar-border: $hw-base !default;
 	.category-caption, .module-caption {
         color: $hw-editor-sidebar-entry-caption-text;
 		background-color: $hw-editor-sidebar-entry-caption-bg;
+        border-color: $hw-border;
         
         & > .iconify {
             color: $hw-editor-sidebar-entry-caption-icon;
@@ -570,11 +602,13 @@ $hw-editor-toolbar-border: $hw-base !default;
     .list {
         background: $hw-multimenu;
         box-shadow: $hw-multimenu-list-shadow;
+        border-color: $hw-border;
 
         .entry {
             color: $hw-multimenu-button-text;
             background: $hw-multimenu-button-bg;
             box-shadow: $hw-multimenu-button-shadow;
+            border-color: $hw-border;
 
             &::before {
                 background: $hw-multimenu-accent;
@@ -585,10 +619,6 @@ $hw-editor-toolbar-border: $hw-base !default;
             }
 
             &.select, &:active {
-                @media (max-width: 1024px) {
-                    box-shadow: 0 0 0.5rem $hw-multimenu-accent;
-                    background-color: $hw-multimenu-accent;
-                }
                 background: $hw-multimenu-button-bg-select;
             }
         }
@@ -600,6 +630,8 @@ $hw-editor-toolbar-border: $hw-base !default;
         .page {
             .category-label {
                 background: $hw-base;
+                border-top: 1px solid $hw-border;
+                border-bottom: 1px solid $hw-border;
             }
         }
     }
