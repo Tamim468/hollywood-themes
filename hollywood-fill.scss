@@ -313,6 +313,10 @@ $hw-editor-toolbar-border: $hw-base !default;
     background: $hw-textbox-bg;
     border: $hw-textbox-border;
     box-shadow: $hw-textbox-shadow;
+
+    .inner {
+        border-color: $hw-border;
+    }
     
     .caption {
         color: $hw-textbox-caption;
@@ -345,6 +349,7 @@ $hw-editor-toolbar-border: $hw-base !default;
     .selector {
         background: $hw-dropdown-bg;
         box-shadow: $hw-dropdown-shadow;
+        border-color: $hw-border;
 
         .iconify {
             color: $hw-dropdown-chevron;
@@ -354,6 +359,7 @@ $hw-editor-toolbar-border: $hw-base !default;
     .list {
         background: $hw-dropdown-bg;
         box-shadow: $hw-dropdown-shadow;
+        border-color: $hw-border;
 
         .highlight {
             background: $hw-primary;
