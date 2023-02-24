@@ -10,7 +10,7 @@
 .hw-slider {
     input[type="range"] {
         background: transparent;
-        -webkit-appearance: none;
+        -webkit-appearance: none;//
 
         &::-webkit-slider-thumb {
           @apply -translate-y-1;
@@ -107,7 +107,7 @@ html, body {
 }
 
 *:focus {
-    outline: none;
+    //outline: none;
 }
 
 .changelog-contents {

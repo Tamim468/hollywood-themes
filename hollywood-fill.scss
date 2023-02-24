@@ -133,7 +133,7 @@ $hw-dropdown-shadow: $hw-dialog-shadow !default;
 
 // Sliders.
 $hw-slider-bg: transparent !default;
-$hw-slider-bar: $hw-base !default;
+$hw-slider-bar: $hw-layer1 !default;
 $hw-slider-pin: $hw-primary !default;
 $hw-slider-caption: $hw-text !default;
 
@@ -247,6 +247,7 @@ $hw-editor-toolbar-border: $hw-base !default;
 .hw-navigationbar {
     color: $hw-navigation-icon;
     pointer-events: none;
+    border-color: $hw-border;
 
     .entry {
         pointer-events: all;
@@ -292,6 +293,7 @@ $hw-editor-toolbar-border: $hw-base !default;
     background: $hw-button-bg;
     border: $hw-button-border;
     box-shadow: $hw-button-shadow;
+    outline-color: $hw-primary;
 
     &:hover {
         color: $hw-button-text-hover;
@@ -405,6 +407,7 @@ $hw-editor-toolbar-border: $hw-base !default;
     color: $hw-dialog-text;
     background: $hw-dialog-bg;
     box-shadow: $hw-dialog-shadow;
+    border-color: $hw-border;
 
     .caption {
         color: $hw-dialog-caption;
@@ -412,6 +415,7 @@ $hw-editor-toolbar-border: $hw-base !default;
 
     .inputs {
         background: $hw-dialog-inputs-bg;
+        border-color: $hw-border;
     }
 }
 
@@ -419,10 +423,12 @@ $hw-editor-toolbar-border: $hw-base !default;
     color: $hw-changelog-text;
     background: $hw-changelog-bg;
     box-shadow: $hw-changelog-shadow;
+    border-color: $hw-border;
 
     .caption {
         color: $hw-changelog-caption-text;
         background: $hw-changelog-caption-bg;
+        border-color: $hw-border;
 
         .iconify {
             color: $hw-changelog-caption-icon;
