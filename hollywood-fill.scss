@@ -137,6 +137,13 @@ $hw-slider-bar: $hw-layer1 !default;
 $hw-slider-pin: $hw-primary !default;
 $hw-slider-caption: $hw-text !default;
 
+// Lists.
+$hw-list-bg: $hw-base !default;
+$hw-list-text: $hw-text !default;
+$hw-list-caption-bg: $hw-base !default;
+$hw-list-entry-bg: $hw-base !default;
+$hw-list-entry-selected-bg: $hw-primary !default;
+
 // Context menus.
 $hw-contextmenu-bg: adjust-color($hw-bg, $alpha: -0.5) !default;
 $hw-contextmenu-text: $hw-text-sub !default;
@@ -380,6 +387,22 @@ $hw-editor-toolbar-border: $hw-base !default;
 
         &::-webkit-slider-thumb {
             background: $hw-slider-pin;
+        }
+    }
+}
+
+.hw-list {
+    color: $hw-list-text;
+    background: $hw-list-bg;
+
+    .caption {
+        background: $hw-list-caption-bg;
+    }
+
+    .value {
+        background: $hw-list-entry-bg;
+        &.selected {
+            background: $hw-list-entry-selected-bg;
         }
     }
 }
