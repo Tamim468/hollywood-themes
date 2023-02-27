@@ -147,7 +147,8 @@
     $hw-editor-action-bg-active: $hw-editor-action-bg-active,
     $hw-editor-action-icon-active: $hw-editor-action-icon-active,
     $hw-editor-shadow-active: $hw-editor-shadow-active,
-    $hw-editor-toolbar-border: $hw-editor-toolbar-border
+    $hw-editor-toolbar-border: $hw-editor-toolbar-border,
+    $disable-fill: $disable-fill
 );
 
 @function asset($path) {
