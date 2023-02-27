@@ -84,13 +84,13 @@ html, body {
 // Imports from previous stylesheet.
 
 * {
-    scrollbar-width: thin;
+    scrollbar-width: auto;
     scrollbar-color: transparent gray;
 }
 
 *::-webkit-scrollbar {
     height: 5px;
-    width: 5px;
+    width: 10px;
 }
 
 *::-webkit-scrollbar-track {
