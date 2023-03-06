@@ -25,6 +25,7 @@ $disable-fill: true;
 
 @import url("https://unpkg.com/7.css");
 
+
 :root {
     --font: 9pt "Segoe UI", sans-serif;
   --surface: #f0f0f0;
@@ -223,15 +224,21 @@ $disable-fill: true;
   }
 
 .hw-titlebar {
-    font: var(--font);
+  font: var(--font);
   box-shadow: inset 0 0 0.5px 0.5px #fff;
   border: var(--window-border) var(--window-border-color);
   border-radius: var(--window-border-radius) var(--window-border-radius) 0 0;
-  padding: var(--window-spacing);
+  padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: var(--window-background);
+
+  #titlebar-logo{
+    background-size: 90%;
+    background-position: 0%;
+    filter: drop-shadow(0px 0.5px 3px #000000c9);
+  }
 
   &-text, #titlebar-middle-text {
     color: #000;
@@ -315,6 +322,15 @@ $disable-fill: true;
 
         &::before {
           background: asset("./icon/close.png") no-repeat center;
+        }
+      }
+
+      &[id="ban_control_language"],
+      &.is-language {
+
+        &::before {
+          background: asset("./icon/earth.png") no-repeat center;
+          background-size: 55%;
         }
       }
 
@@ -473,6 +489,198 @@ $disable-fill: true;
     display: flex;
     padding-left: 10px;
     padding-top: 3px;
+}
+
+.h-8{
+    height: 2.3rem;
+}
+
+#nav-themes{
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    border: var(--window-border) var(--control-border-color);
+    border-top: 0;
+    border-radius: 0 0 var(--control-border-radius) var(--control-border-radius);
+    margin-top: -var(--window-spacing);
+    box-shadow: 0 0 2px #fff;
+    transform: translateY(-0.3rem);
+    background: var(--control-background);
+    border-color: var(--window-border-color);
+    box-shadow: var(--control-inset-shadow);
+    width: 19%;
+    max-width: 4%;
+    color:#ddd;
+
+    &.select {
+        color:#ffffff;
+        background: radial-gradient(
+            circle at bottom,
+            #2aceda,
+            transparent 60%
+          ),
+          linear-gradient(#a9d2e8 50%, #196c9b 50%);
+      }
+    
+    &:hover {
+        box-shadow: 0 0 15px #2aceda, var(--control-inset-shadow);
+        background: radial-gradient(
+            circle at bottom,
+            #2aceda,
+            transparent 60%
+          ),
+          linear-gradient(#a9d2e8 50%, #196c9b 50%);
+      }
+
+      &:active {
+        box-shadow: 0 0 15px #2aceda, var(--control-inset-shadow);
+        background-image: radial-gradient(
+            circle at bottom,
+            #0bfdfa,
+            transparent 60%
+          ),
+          linear-gradient(#86a7bc 50%, #092747 50%);
+    }
+}
+
+#nav-editor{
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    border: var(--window-border) var(--control-border-color);
+    border-top: 0;
+    border-radius: 0 0 var(--control-border-radius) var(--control-border-radius);
+    margin-top: -var(--window-spacing);
+    box-shadow: 0 0 2px #fff;
+    transform: translateY(-0.3rem);
+    background: var(--control-background);
+    border-color: var(--window-border-color);
+    box-shadow: var(--control-inset-shadow);
+    width: 19%;
+    max-width: 4%;
+    color:#ddd;
+
+    &.select {
+        color:#ffffff;
+        background: radial-gradient(
+            circle at bottom,
+            #2aceda,
+            transparent 60%
+          ),
+          linear-gradient(#a9d2e8 50%, #196c9b 50%);
+      }
+    
+    &:hover {
+        box-shadow: 0 0 15px #2aceda, var(--control-inset-shadow);
+        background: radial-gradient(
+            circle at bottom,
+            #2aceda,
+            transparent 60%
+          ),
+          linear-gradient(#a9d2e8 50%, #196c9b 50%);
+      }
+
+      &:active {
+        box-shadow: 0 0 15px #2aceda, var(--control-inset-shadow);
+        background: radial-gradient(
+            circle at bottom,
+            #0bfdfa,
+            transparent 60%
+          ),
+          linear-gradient(#86a7bc 50%, #092747 50%);
+    }
+}
+
+#nav-settings{
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    border: var(--window-border) var(--control-border-color);
+    border-top: 0;
+    border-radius: 0 0 var(--control-border-radius) var(--control-border-radius);
+    margin-top: -var(--window-spacing);
+    box-shadow: 0 0 2px #fff;
+    transform: translateY(-0.3rem);
+    background: var(--control-background);
+    border-color: var(--window-border-color);
+    box-shadow: var(--control-inset-shadow);
+    width: 19%;
+    max-width: 4%;
+    color:#ddd;
+
+    &.select {
+        color:#ffffff;
+        background: radial-gradient(
+            circle at bottom,
+            #2aceda,
+            transparent 60%
+          ),
+          linear-gradient(#a9d2e8 50%, #196c9b 50%);
+      }
+    
+    &:hover {
+        box-shadow: 0 0 15px #2aceda, var(--control-inset-shadow);
+        background: radial-gradient(
+            circle at bottom,
+            #2aceda,
+            transparent 60%
+          ),
+          linear-gradient(#a9d2e8 50%, #196c9b 50%);
+      }
+
+      &:active {
+        box-shadow: 0 0 15px #2aceda, var(--control-inset-shadow);
+        background: radial-gradient(
+            circle at bottom,
+            #0bfdfa,
+            transparent 60%
+          ),
+          linear-gradient(#86a7bc 50%, #092747 50%);
+    }
+}
+
+#nav-plugins{
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    border: var(--window-border) var(--control-border-color);
+    border-top: 0;
+    border-radius: 0 0 var(--control-border-radius) var(--control-border-radius);
+    margin-top: -var(--window-spacing);
+    box-shadow: 0 0 2px #fff;
+    transform: translateY(-0.3rem);
+    background: var(--control-background);
+    border-color: var(--window-border-color);
+    box-shadow: var(--control-inset-shadow);
+    width: 19%;
+    max-width: 4%;
+    color:#ddd;
+
+    &.select {
+        color:#ffffff;
+        background: radial-gradient(
+            circle at bottom,
+            #2aceda,
+            transparent 60%
+          ),
+          linear-gradient(#a9d2e8 50%, #196c9b 50%);
+      }
+    
+    &:hover {
+        box-shadow: 0 0 15px #2aceda, var(--control-inset-shadow);
+        background: radial-gradient(
+            circle at bottom,
+            #2aceda,
+            transparent 60%
+          ),
+          linear-gradient(#a9d2e8 50%, #196c9b 50%);
+      }
+
+      &:active {
+        box-shadow: 0 0 15px #2aceda, var(--control-inset-shadow);
+        background: radial-gradient(
+            circle at bottom,
+            #0bfdfa,
+            transparent 60%
+          ),
+          linear-gradient(#86a7bc 50%, #092747 50%);
+    }
 }
 
 .main-container {
