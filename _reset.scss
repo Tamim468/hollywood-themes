@@ -130,7 +130,7 @@ $hw-list-entry-bg: $hw-base !default;
 $hw-list-entry-selected-bg: $hw-primary !default;
 
 // Context menus.
-$hw-contextmenu-bg: adjust-color($hw-bg) !default;
+$hw-contextmenu-bg: adjust-color($hw-layer1) !default;
 $hw-contextmenu-text: $hw-text-sub !default;
 $hw-contextmenu-text-select: $hw-text !default;
 $hw-contextmenu-icon: $hw-text-sub !default;
