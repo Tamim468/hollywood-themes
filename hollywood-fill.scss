@@ -482,6 +482,23 @@
         }
     }
 
+    // Console.
+
+    .console-header {
+        color: $hw-console-header-text;
+        background: $hw-console-header-background;
+        border-bottom: $hw-console-header-border;
+        box-shadow: $hw-console-header-shadow;
+    }
+    
+    .console-contents {
+        background: $hw-console-contents-background;
+    }
+
+    #console-body {
+        background-color: $hw-bg !important;
+    }
+
     html, body {
         color: $hw-text;
         background: $hw-bg;

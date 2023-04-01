@@ -199,3 +199,11 @@ $hw-editor-shadow-active: none !default;
 
 // Toolbar.
 $hw-editor-toolbar-border: $hw-base !default;
+
+/* -------------- Console colors --------------  */
+
+$hw-console-header-text: $hw-text !default;
+$hw-console-header-background: $hw-bg !default;
+$hw-console-header-border: 1px solid rgba(255, 255, 255, 0.5) !default;
+$hw-console-header-shadow: 0 0 1rem rgba(255, 255, 255, 0.2) !default;
+$hw-console-contents-background: $hw-bg !default;
