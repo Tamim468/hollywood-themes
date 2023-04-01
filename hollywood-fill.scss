@@ -269,16 +269,19 @@
         color: $hw-tasks-text;
         background: $hw-tasks-bg;
         box-shadow: $hw-tasks-shadow;
+        border-color: $hw-border;
 
         .caption {
             color: $hw-tasks-caption-text;
             background: $hw-tasks-caption-bg;
+            border-bottom-color: $hw-border;
         }
 
         .task {
             color: $hw-tasks-task-text;
             background: $hw-tasks-task-bg;
             box-shadow: $hw-tasks-task-shadow;
+            border-color: $hw-border;
 
             .subtext {
                 color: $hw-tasks-task-subtext;
